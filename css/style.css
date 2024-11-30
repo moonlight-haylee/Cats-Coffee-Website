@@ -1,0 +1,383 @@
+main, .carousel {
+    animation: transitionIn 1s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+    
+}
+.cursor {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .05s;
+}
+.cursorExtended {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+}
+
+body {
+    background-color:#fff;
+    color:#555;
+	font-family: 'Optima';
+	font-size:16px;
+	line-height:1.6em;
+    cursor: pointer;
+}
+#main-header {
+    color:#333;
+    background-color: #fff6e6;
+	letter-spacing: 0.5em;
+    padding-top: 10px;
+    width: 100%;
+    font-family: "Century Gothic";
+}
+
+.container {
+    width:90%;
+    margin:auto;
+    overflow: hidden;
+}
+
+
+.btn-sub {
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.btn-sub:hover {
+    letter-spacing: 2px;
+}
+#popup {
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 1000;
+    background: #fff;
+    color: #333;
+    width: 450px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px #333;
+    transition: 0.5s;
+    visibility: hidden;
+}
+#popup.active {
+    visibility: visible;
+    top: -20%;
+}
+#popup .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#popup .content img {
+    max-width: 80px;
+}
+#popup .content h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+#popup .content p {
+    text-align: center;
+    font-size: 16px;
+}
+
+#popup .content .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+#popup .content .inputBox input {
+    width: 100%;
+    border: 1px solid #333;
+    padding: 15px;
+    outline: none;
+    font-size: 18px;
+}
+#popup .content .inputBox input[type="submit"] {
+    max-width: 150px;
+    background: rgb(12, 148, 232);
+    color: #fff;
+    border: none;
+}
+.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+.close img {
+    max-width: 30px;
+
+}
+
+
+
+#mycarousel {
+    position: absolute;
+    top: 0;
+}
+
+.carousel-item {
+    height:650px;
+    background: black;
+    color: white;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+.text-display {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 40px;
+    padding-left: 200px;
+}
+.overlay-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+.navbar1 {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    border-radius: 0;
+    justify-content: center;
+}
+.navbar {
+    width: 100%;
+    position: relative;
+    border: 0 !important;
+    justify-content: center;
+}
+
+.navbar li, .navbar1 li {
+    padding-right: 15px;
+    padding-left: 15px;
+    display:inline;
+
+}
+
+.dropdown-item {
+    color: #333;
+}
+
+.navbar a, .navbar1 a {
+	text-decoration: underline;
+	text-decoration-style: wavy;
+	text-decoration-color: #b47864;
+	padding-right:20px;
+}
+
+.nav-item a{
+    font-size:25px;
+}
+
+.nav-item:hover {
+    background-color: whitesmoke;
+    padding: 15px;
+}
+
+.nav-link:hover {
+    background-color: #333;
+}
+
+.flexbox-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    background-color: #e3bdb5
+}
+
+.flexbox-container > div {
+    text-align: center;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+}
+#sidebar{
+	border-style: dashed;
+	float:right;
+	background: whitesmoke;
+	color: black;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.image-hover div{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    background: black;
+    color: white;
+    padding: 5px;
+    font-family: 'Optima';
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+   
+.image-hover:hover{
+    cursor: pointer;
+}
+   
+.image-hover:hover div{
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7; 
+}
+
+#catvideo {
+    float: left;
+    box-sizing: border-box;
+}
+
+#submitted-posts {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#submitted-posts > div {
+    text-align: center;
+    color: black;
+    padding: 5px;
+}
+
+.post {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #e6e6e6;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
+
+.post > div {
+    text-align: center;
+    color: black; 
+    width: 50%;
+    margin: 10px;
+}
+
+#showcase {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    padding: 20px;
+}
+
+#showcase > div {
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+#contactInfo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;        /*vertical axis*/
+    align-content: flex-start;
+}
+
+#contactInfo > div {
+    text-align: left;
+    margin: 10px;
+    padding: 5px;
+    width: 50%;
+}
+
+#serviceDescription {
+    background-color: #e6e6e6;
+    padding: 5px
+}
+
+input {
+   padding: 5px;
+   box-sizing: border-box;
+   border: 1px solid #bc7563;
+   border-radius: 4px; 
+}
+
+input:focus {
+    border: 3px dashed #bc7563;
+}
+
+.box-content {
+    border:10px solid #bc7563; 
+    padding: 10;
+    text-align: center;
+}
+.box-content th {
+    border:5px solid #bc7563; 
+    padding: 10;
+    text-align: center;
+}
+.box-content td {
+    border:5px dashed #bc7563; 
+    padding: 10;
+    text-align: center;
+}
+
+#post-inquiry {
+    padding: 10px;
+    border:10px solid #bc7563; 
+
+}
+
+main, #iframework {
+    position: relative;
+}
+
+#main-footer{
+	background: #333;
+	color:#fff6e6;
+	text-align: center;
+	padding:10px;
+	margin-top:10%;
+    
+}
