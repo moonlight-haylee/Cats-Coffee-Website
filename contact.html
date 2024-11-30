@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+    <head lang="en">
+        <title>NMSU Cat Cafe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css\style.css">
+    </head>
+    <body>
+        <header id="main-header">
+            <div class="container">
+                <h1 class="text-center fw-bold">♡ Las Cruces Cats & Coffee ♡</h1>
+            </div>
+        </header>
+        <div class="cursor"></div>
+        <div class="cursorExtended"></div>
+        <script>
+            var cursor = document.querySelector(".cursor");
+            var cursorExtended = document.querySelector(".cursorExtended");
+            document.addEventListener("mousemove", function(e) {
+                cursor.style.cssText = cursorExtended.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+            });
+        </script>
+
+        <nav class="navbar navbar-expand-lg navbar-dark"  style="background-color: #bc7563">
+            <div class="container-fluid">
+        
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse mt-3" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a href="home.html" class="nav-link active">
+                                Home
+                            </a>
+                        </li>
+        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                About
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropDown">
+                                <li><a href="about.html" class="dropdown-item">About Us!</a></li>
+                                <li><a href="cafemenu.html" class="dropdown-item">Our Menu</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="home.html" class="navbar-brand mb-0 h1">
+                                <img class="d-inlineblock" src="img/catnav.gif" height="72px">
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link active">
+                                Blog
+                            </a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link active">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="mt-5">
+            <div class="container">
+                <h2 class="fw-bold">Contact Us!</h2>
+                <p><b><a href="https://www.goodnet.org/articles/7-scientifically-proven-health-benefits-being-cat-owner" target="_blank">Here is a fun fact about cats by GOODNET.org</a></b></p>
+        
+                <blockquote cite="https://www.goodnet.org/articles/7-scientifically-proven-health-benefits-being-cat-owner"><i>
+                    A cat purring is one of the most comforting sounds in the world and while it certainly means your cat is happy 
+                    and comfortable, the sound has also been long associated with a therapeutic healing ability on human bones and muscle.
+                </i></blockquote>
+            </div>
+        
+            <section id="contactInfo" class="container">
+                <div>
+                    <aside id="catvideo" class="image-hover">
+                        <a href="home.html"><video width="320" height="400" autoplay muted>
+                            <source src="img\catcafevid.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                          </video></a>
+                          <div>Click here to go back to our Home page!</div>
+                    </aside>
+                </div>
+
+                <div>
+                <address>
+                    <h3 class="fw-bold">Contact Info:</h3>
+                    <p><b>Address: </b><br>1234 University St <br>Las Cruces, New Mexico 88011</p>
+                    <p><b>Phone Number: </b><br>(575) XXX-1234</p>
+                    <p><b>Email: </b><br>NMSUCatCafe@email.com</p>
+        
+                    <aside id="Hours Operation">
+                        <p class="fw-bold">Hours of Operation:</p>
+                        <ul>
+                            <li>Monday: 11am - 7pm</li>
+                            <li>Tuesday: 11am - 7pm</li>
+                            <li>Wednesday: 11am - 7pm</li>
+                            <li>Thursday: 11am - 7pm</li>
+                            <li>Friday: 10am - 8pm</li>
+                            <li>Saturday: 10am - 8pm</li>
+                            <li>Sunday: 12pm - 6pm</li>
+                        </ul>
+                    </aside>
+                </address>
+                </div>
+        
+                <div>
+                    <aside id="catvideo" class="image-hover">
+                        <a href="home.html"><video width="320" height="400" autoplay muted>
+                            <source src="img\catvideosnap.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                          </video></a>
+                          <div>OR... click here to go back to our Home page!</div>
+                    </aside>
+                </div>
+            </section>
+        
+        </main>
+    
+        <footer id="main-footer">
+            <p><b>Follow us on social media:&ensp;</b> 
+                <a href="https://www.instagram.com"><img src="img\instaImage.png" height="25"></a>
+                <a href="https://www.facebook.com"><img src="img\facebook.png" height="30"></a>
+            </p>
+            <p>Copyright &copy; 2022 Haylee Viramontes NMSU ET 280: Final Project</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </body>
+</html>

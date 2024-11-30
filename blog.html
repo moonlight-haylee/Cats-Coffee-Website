@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+    <head lang="en">
+        <title>NMSU Cat Cafe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css\style.css">
+    </head>
+    <body>
+        <header id="main-header">
+            <div class="container">
+                <h1 class="text-center fw-bold">♡ Las Cruces Cats & Coffee ♡</h1>
+            </div>
+        </header>
+        <div class="cursor"></div>
+        <div class="cursorExtended"></div>
+        <script>
+            var cursor = document.querySelector(".cursor");
+            var cursorExtended = document.querySelector(".cursorExtended");
+            document.addEventListener("mousemove", function(e) {
+                cursor.style.cssText = cursorExtended.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+            });
+        </script>
+
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #bc7563">
+            <div class="container-fluid">
+        
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse mt-3" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a href="home.html" class="nav-link active">
+                                Home
+                            </a>
+                        </li>
+        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                About
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropDown">
+                                <li><a href="about.html" class="dropdown-item">About Us!</a></li>
+                                <li><a href="cafemenu.html" class="dropdown-item">Our Menu</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="home.html" class="navbar-brand mb-0 h1">
+                                <img class="d-inlineblock" src="img/catnav.gif" height="72px">
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link active">
+                                Blog
+                            </a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link active">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <section class="container mt-5">
+                <article id="main-blog">
+                    <section class="image-hover">
+                        <a href="home.html"><h1 class="fs-3">More About Our Cats!</h1></a>
+                    <div>Click here to go back to our Home page!</div>
+                    </section>
+                    <p>We have teamed up with animal shelters around the city to provide extra support and resources for the cats that are in need of a loving home.
+                        Here, we will post updates on those who have been adopted and any new members that come to us who are looking for their forever home! 
+                        After adoption, we always ask families to send us pictures of their new companions in their new homes to share our success stories and 
+                        to demonstrate the impact you made in their lives!</p>
+                    <ul>
+                        <li><mark><a href="#story-form">Post Your Story/Ask a Question!</a></mark></li>
+                        <li><mark><a href="#submitted-posts">Blog Posts!</a></mark></li>
+                    </ul>
+                    <section id="story-form">
+                        <h2>Share Your Story!</h2>
+                        <p>Did you recently adopt at a local shelter, or our center? Or do you have any questions you're looking for someone to answer? Share below!</p>
+                        <!--Form goes here-->
+                        <form id="post-inquiry">
+                            <fieldset>
+                            <label>What would you like to submit?</label><br>
+                            <input type="radio" id="option1" value="Question?" class="radio">
+                            <label for="option1">I have a question!</label><br>
+                            <input type="radio" id="option2" value="Success-Story" class="radio">
+                            <label for="option2">I recently adopted and would like to share our experience!</label><br><br>
+        
+                            <label for="fname">First Name:</label>
+                            <input type="text" id="fname" name="fname"><br>
+                    
+                            <label for="lname">Last Name:</label>
+                            <input type="text" id="lname" name="lname"><br>
+        
+                            <label for="todaydate">Today's date:</label>
+                            <input type="date" id="todaydate" name="today"><br>
+        
+                            <label for="email">Email:</label>
+                            <input type="email"><br>
+                    
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(XXX) XXX-XXXX"><br><br>
+        
+                            <label for="Write a response...">Enter your response!</label><br>
+                            <textarea name="Write a response..." cols="80" rows="10"></textarea><br><br>
+                            
+                            <input type="checkbox" class = "checkbox" value = "consent-to-post">
+                            &nbsp; I understand that my question or story may be posted for others who are interested in Las Cruces Cats & Coffee's adoption history or have similar questions.
+                                I am also aware that my personal information will not be posted alongside my submission to protect my identity.
+                            <br><br>
+                            
+                            <input type="submit" value="Submit">
+                        </fieldset>
+                        </form>
+                    </section>
+                </article>
+        
+                <section id="submitted-posts" class="mt-5">
+                    <div>
+                        <h1>Blog Posts:</h1>
+                    </div>
+                    
+                    <div>
+                        <article>
+                            <fieldset class="post">
+                            <div>
+                            <p>
+                                About two months ago, I went into the cafe and met this lovely cat named Stella. She immediately caught my attention because
+                                she was so loving, playful and never left my side. I instantly fell in love. The adoption process was easy, since I don't own
+                                any other pets, and ever since I brought her home she has been the best companion. She is so energetic, and having her by my
+                                side has made my days brighter!
+                            </p>
+                            </div>
+                            <div>
+                                <img src="img\playfulcat.webp" height="300">
+                            </div>
+                            </fieldset>
+                        </article>
+                    </div>
+        
+                    <div>
+                        <article>
+                        <fieldset class="post">
+                            <div>
+                            <p>
+                                I know this probably sounds crazy, but I recently adopted my 6th cat. I also have 2 dogs who are so friendly to other dogs and 
+                                cats. The process took much longer, due to the amound of pets I initially had. I asked the shop owner if I could possibly introduce
+                                Fluffy to the dogs first, so I brought them in to get to know each other, then my cats one by one (on separate occasions) as we worked through 
+                                this application. After I got them all introduced, I got the approval to take Fluffy home! Now, they're alll best buddies, and 
+                                he fits right in with the group! Fluffy is the one on the far right, so he's still at a distance from them but he's gotten way 
+                                more comfortable over the few months he's been home. Thank you!
+                            </p>
+                            </div>
+                            <div>
+                                <img src="img\multcats.jpg" height="300">    
+                            </div>
+                        </fieldset>
+                        </article>
+                    </div>
+        
+                    <div>
+                        <article>
+                        <fieldset class="post">
+                            <div>
+                            <p>
+                                It's been over a year since I adopted Stewart from this place, and he's definitely a character! When I first met him, he was a bit 
+                                standoff-ish, but not agressive or anything. He just wasn't interested in anything, and I found it funny. He would kind of sit near me 
+                                and stare me down, but wouldn't come to me. I always have my colleagues over for game night, or to just have a chat, and Stewart seems 
+                                to be an intellectual. He's always interested in the cards we lay on the table or when we work on our computers. Like I said, what a character. xD
+                            </p>  
+                            </div>
+                            <div>
+                                <img src="img\cardscat.webp" height="300">
+                            </div>
+                        </fieldset>
+                        </article>
+                    </div>
+                </section>
+            </section>
+    
+        </main>
+    
+        <footer id="main-footer">
+            <p><b>Follow us on social media:&ensp;</b> 
+                <a href="https://www.instagram.com"><img src="img\instaImage.png" height="25"></a>
+                <a href="https://www.facebook.com"><img src="img\facebook.png" height="30"></a>
+            </p>
+            <p>Copyright &copy; 2022 Haylee Viramontes NMSU ET 280: Final Project</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </body>
+</html>

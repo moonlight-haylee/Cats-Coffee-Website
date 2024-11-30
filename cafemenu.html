@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+    <head lang="en">
+        <title>NMSU Cat Cafe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css\style.css">
+    </head>
+    <body>
+        <header id="main-header">
+            <div class="container">
+                <h1 class="text-center fw-bold">♡ Las Cruces Cats & Coffee ♡</h1>
+            </div>
+        </header>
+        <div class="cursor"></div>
+        <div class="cursorExtended"></div>
+        <script>
+            var cursor = document.querySelector(".cursor");
+            var cursorExtended = document.querySelector(".cursorExtended");
+            document.addEventListener("mousemove", function(e) {
+                cursor.style.cssText = cursorExtended.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+            });
+        </script>
+
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #bc7563">
+            <div class="container-fluid">
+        
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse mt-3" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a href="home.html" class="nav-link active">
+                                Home
+                            </a>
+                        </li>
+        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                About
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropDown">
+                                <li><a href="about.html" class="dropdown-item">About Us!</a></li>
+                                <li><a href="cafemenu.html" class="dropdown-item">Our Menu</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="home.html" class="navbar-brand mb-0 h1">
+                                <img class="d-inlineblock" src="img/catnav.gif" height="72px">
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link active">
+                                Blog
+                            </a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link active">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <section id="showcase">
+                <div class="image-hover">
+                    <h1>Welcome To Our Cafe!</h1>
+                    <p>Click on the picture to go back to our home page! ----->></p>
+                </div>
+                <div class="image-hover">
+                    <a href="home.html"><img src="img\coffeecat.jpg" height="300"></a>
+                    <div>Click here to go back to our Home Page!</div>
+                </div>
+            </section>
+    
+            <div class="container">
+                <section id="serviceDescription">
+                    <fieldset>
+                    <h2>Our Menu and Services (+ Descriptions):</h2>
+                    <dl>
+                        <dt><strong>Playtime With Cats:</strong></dt>
+                        <dd><em>We have a separate room where we let the cats roam free. This gives customers the option to either sit and watch them play  
+                            or play with them in the room!The costs of playtime go towards the costs and needs for the cats here and local shelters. 
+                            You have the option to book multiple hour slots, and/or 30 minute increments.
+                        </em></dd>
+                            <ul>
+                                <li>30 Minutes: $6.00 per Person</li>
+                                <li>1 Hour: $10.00 per Person</li>
+                                <li>Cat Treats: $1.00 per Baggie</li>
+                            </ul>
+                        <dt><strong>Personalized Cat T-Shirt:</strong></dt>
+                            <dd><em>Come into the shop to see a few of our designs, or show us what you'd like on your shirt!</em></dd>
+                            <ul>
+                                <li>Adult Sizes: $25.00</li>
+                                <li>Kid's Sizes: $15.00</li>
+                            </ul>
+                        <dt><strong>Cat Toys: $5.00</strong></dt>
+                        <dd><em>We have some cat toys for sale for you to give to a companion!</em></dd><br>
+                        <dt><strong>Coffee Menu:</strong></dt>
+                            <ul>
+                                <li>Cat-puccino: $3.50</li>
+                                <img src="img\cappuccino.jpg" height="200">
+                                <li>Cat-amel Frappucino: $4.00</li>
+                                <img src="img\frappuccino.jpg" height="200">
+                                <li>Macchiato: $3.75</li>
+                                <img src="img\macchiato.jpg" height="200">
+                                <li>Mocha Latte: $4.00</li>
+                                <img src="img\mochalatte.jpg" height="200">>
+    
+                            </ul>
+                    </dl>
+                </fieldset>
+                </section>
+            </div>
+        </main>
+    
+        <footer id="main-footer">
+            <p><b>Follow us on social media:&ensp;</b> 
+                <a href="https://www.instagram.com"><img src="img\instaImage.png" height="25"></a>
+                <a href="https://www.facebook.com"><img src="img\facebook.png" height="30"></a>
+            </p>
+            <p>Copyright &copy; 2022 Haylee Viramontes NMSU ET 280: Final Project</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </body>
+</html>

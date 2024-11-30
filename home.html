@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+    <head lang="en">
+        <title>NMSU Cat Cafe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css\style.css">
+    </head>
+    <body>
+        <header id="main-header">
+            <div class="container">
+                <h1 class="text-center fw-bold">♡ Las Cruces Cats & Coffee ♡</h1>
+            </div>
+        </header>
+
+        <nav class="navbar1 navbar-expand-lg navbar-dark mt-2"  style="background: none">
+            <div class="container-fluid">
+        
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse mt-3" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a href="home.html" class="nav-link active">
+                                Home
+                            </a>
+                        </li>
+        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                About
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropDown">
+                                <li><a href="about.html" class="dropdown-item">About Us!</a></li>
+                                <li><a href="cafemenu.html" class="dropdown-item">Our Menu</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="home.html" class="navbar-brand mb-0 h1">
+                                <img class="d-inlineblock" src="img/catnav.gif" height="72px">
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link active">
+                                Blog
+                            </a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link active">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="cursor"></div>
+        <div class="cursorExtended"></div>
+        <script>
+            var cursor = document.querySelector(".cursor");
+            var cursorExtended = document.querySelector(".cursorExtended");
+            document.addEventListener("mousemove", function(e) {
+                cursor.style.cssText = cursorExtended.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+            });
+        </script>
+        
+        <div id="popup">
+            <div class="content">
+                <img src="img/coolcat.jpg">
+                <h2>Join Our Weekly Newsletters!</h2>
+                <p>We promise we will only send the most important emails that will keep you updated on our shop, including deals and special events taking place!</p>
+                <form class="inputBox" action="connect.php" method="post">
+                    <input type="text" name="firstName" placeholder="First Name:"><br>
+                    <input type="text" name="lastName" placeholder="Last Name"><br>
+                    <input type="email" name="emailSignUp" placeholder="email@gmail.com">
+                </form>
+                <div class="inputBox">
+                    <input type="submit" value="Sign Up!" class="btn-sub">
+                </div>
+            </div>
+            <a class="close" onclick="popupToggle();"><img src="img/close.png"></a>
+        </div>
+        <script>
+            function popupToggle() {
+                const popup = document.getElementById('popup')
+                popup.classList.toggle('active')
+            }
+        </script>
+
+
+        <div id="myCarousel" class="carousel slide carousel-slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <div class="overlay-image" style="background-image:url(img/miawcat2.jpg)"></div> 
+                    <div class="text-display">
+                        <h1>Welcome!</h1>
+                        <p> Would you like to sign up for our weekly newsletters to stay in the know about special events? Sign up today!</p>
+                        <a class="btn btn-sub btn-lg btn-primary" onclick="popupToggle();">Sign Me Up!</a>
+                    </div>
+                </div>
+            
+                <div class="carousel-item" data-bs-interval="4000">
+                    <div class="overlay-image" style="background-image:url(img/curiouscat.jpeg)"></div>
+                    <div class="text-display">
+                        <h1></h1>
+                        <p>Click on the button below to be redirected to our menu with more details!</p>
+                        <a href="cafemenu.html" class="btn btn-lg btn-primary">View Our Cafe Menu!</a>
+                    </div>
+                </div>
+    
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class="overlay-image" style="background-image:url(img/danielcat.jpg)"></div>
+                    <div class="text-display mb-5">
+                        <p>This is George! George welcomes you to look around our website! :D</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="overlay-image" style="background-image:url(img/cat-group-window.jpg)"></div>
+                </div>
+            </div>
+            <a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+    
+            <a href="#myCarousel" class="carousel-control-next" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+        
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <main>
+         <section class="container mt-5">
+            <div id="main-body">
+                <h1><b>The First Cat Cafe in the City!</b></h1>
+                <p>Welcome to Las Cruces Cats & Coffee, where our mission is to provide a relaxing environment to enjoy your meal, snack, and/or drink and 
+                    get the chance to meet and play with the cats we have available for adoption! We work closely with animal shelters in the area who need 
+                    extra support in giving these lovely companions a loving home, or some extra love during the day while they wait!</p>
+
+                <p>All of the costs of treats, playtime, merchandise, and any other fees will be allocated to the needs of the cats, such as food, toys, vet bills, etc. </p>
+            </div>
+
+            <div class = "flexbox-container">
+            <div id="iframework">
+                <h2 class="fw-bold">What are Cat Cafes?</h2>
+                <p>To learn more about cat cafes and how they were first introduced, please see the page below:</p>
+                <iframe src="https://www.theneighborscat.com/blog/2017/11/20/what-is-a-cat-cafe" width="100%" height="600" title="More About Cat Cafes"></iframe>
+            </div>
+
+            <div>
+            <aside id="sidebar">
+                <p><b>Our services:</b></p>
+                <ol>
+                    <li><strong>Playtime With Cats:</strong></li>
+                        <ul>
+                            <li>30 Minutes: $6.00 per Person</li>
+                            <li>1 Hour: $10.00 per Person</li>
+                            <li>Cat Treats: $1.00 per Baggie</li>
+                        </ul>
+                    <li><strong>Personalized Cat T-Shirt:</strong></li>
+                        <ul>
+                            <li>Adult Sizes: $25.00</li>
+                            <li>Kid's Sizes: $15.00</li>
+                        </ul>
+                    <li><strong>Cat Toys: $5.00</strong></li>
+                    <li><Strong>Coffee Menu:</strong></li>
+                        <ul>
+                            <li>Cat-puccino: $3.50</li>
+                            <li>Cat-amel Frappucino: $4.00</li>
+                            <li>Macchiato: $3.75</li>
+                            <li>Mocha Latte: $4.00</li>
+                        </ul>
+                </ol>
+            </aside>
+            </div>
+
+            <div id="second-body">
+                <h1><b>Visit Us Today!</b></h1>
+                <p>With that introduction about cat cafes out of the way, feel free to take a look around our virtual space. At least, 
+                    in the meantime while you make time to experience this lovely environment for yourself! We all look forward to seeing you soon!
+                </p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <p><b>Follow us on social media:&ensp;</b> 
+            <a href="https://www.instagram.com"><img src="img\instaImage.png" height="25"></a>
+            <a href="https://www.facebook.com"><img src="img\facebook.png" height="30"></a>
+        </p>
+        <p>Copyright &copy; 2022 Haylee Viramontes NMSU ET 280: Final Project</p>
+    </footer>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </body>
+</html>

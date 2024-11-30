@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+    <head lang="en">
+        <title>NMSU Cat Cafe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css\style.css">
+    </head>
+    <body>
+        <div class="cursor"></div>
+        <div class="cursorExtended"></div>
+        <script>
+            var cursor = document.querySelector(".cursor");
+            var cursorExtended = document.querySelector(".cursorExtended");
+            document.addEventListener("mousemove", function(e) {
+                cursor.style.cssText = cursorExtended.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+            });
+        </script>
+        
+        <header id="main-header">
+            <div class="container">
+                <h1 class="text-center fw-bold">♡ Las Cruces Cats & Coffee ♡</h1>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #bc7563">
+            <div class="container-fluid">
+        
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse mt-3" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a href="home.html" class="nav-link active">
+                                Home
+                            </a>
+                        </li>
+        
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                About
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropDown">
+                                <li><a href="about.html" class="dropdown-item">About Us!</a></li>
+                                <li><a href="cafemenu.html" class="dropdown-item">Our Menu</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="home.html" class="navbar-brand mb-0 h1">
+                                <img class="d-inlineblock" src="img/catnav.gif" height="72px">
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link active">
+                                Blog
+                            </a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link active">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <section class="container mt-5">
+                <div>
+                    <section id="main-body">
+                        <h1>Learn More About Us!</h1>
+                        <p>Learn more about the group of individuals who make this all possible! We are a group of college students with a wide range of majors and passions!
+        
+                        </p>
+                    </section>
+                </div>
+        
+                <!--<table class="box-content"> -->
+                <table border = "10" cellpadding = "10" class="box-content">
+                    <tr>                
+                        <th><b>Name:</b></th>
+                        <th><b>Representative Picture:</b></th>
+                        <th><b>Passion:</b></th>
+                        <th><b>College Major:</b></th>
+                        <th><b>Number of Pets:</b></th>
+                    </tr>
+                    <tr>
+                        <td><i>Dr. Doofenshmirtz</i></td>
+                        <td class="image-hover"><a href="home.html"><img src="img\smart cat.jpg" width="200"></a>
+                        <div>Click here to go back to our Home page!</div> </td>
+                        <td>Animal Rescue</td>
+                        <td>PhD in Animal Science</td>
+                        <td>I have 3 cats and 1 dog!</td>
+                    </tr>
+                    <tr>
+                        <td><i>Haylee Viramontes</i></td>
+                        <td><img src="img\happy cat.png" width="200"></td>
+                        <td>Artificial Intelligence and Psychology</td>
+                        <td>Information Technology</td>
+                        <td>None, but I love animals. I used to have 5 dogs and a few cats!</td>
+                    </tr>
+                    <tr>
+                        <td><i>Cat Valentine</i></td>
+                        <td><img src="img\hug cat.jpg" width="200"></td>
+                        <td>Child Development</td>
+                        <td>Education</td>
+                        <td>I have like 8 dogs maybe, I lost count a long time ago... xD</td>
+                    </tr>
+                    <tr>
+                        <td><i>Leorio Paradinight</i></td>
+                        <td><img src="img\shocked cat.jpg" width="200"></td>
+                        <td>Solving Poverty Issues</td>
+                        <td>International Business and Accounting</td>
+                        <td>I have no pets, but I'm okay with only taking care of the cats here!</td>
+                    </tr>
+                    <tr>
+                        <td><i>Asuna Yuuki</i></td>
+                        <td><img src="img\sleepy.jpg" width="200"></td>
+                        <td>Freedom of Self Expression</td>
+                        <td>Animation and Visual Effects</td>
+                        <td>I have a pet rabbit!</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+    
+        <footer id="main-footer">
+            <p><b>Follow us on social media:&ensp;</b> 
+                <a href="https://www.instagram.com"><img src="img\instaImage.png" height="25"></a>
+                <a href="https://www.facebook.com"><img src="img\facebook.png" height="30"></a>
+            </p>
+            <p>Copyright &copy; 2022 Haylee Viramontes NMSU ET 280: Final Project</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </body>
+</html>
